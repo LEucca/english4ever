@@ -181,3 +181,48 @@ document.addEventListener("mouseup", () => {
 window.onload = function() {
   updateCard();  // Met à jour la première carte au chargement de la page
 };
+
+// Fonction pour envoyer les logs au serveur à la fin du jeu
+function logGameOver(score, totalCards) {
+  const deviceInfo = navigator.userAgent;
+
+  fetch('/game-over', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      score,
+      totalCards,
+      deviceInfo
+    })
+  }).then(response => {
+    if (response.ok) {
+      console.log('Log de fin de partie envoyé avec succès.');
+    } else {
+      console.error('Erreur lors de l\'envoi du log de fin de partie.');
+    }
+  });
+}
+
+// Fonction pour afficher le bouton "Réessayer" à la fin de la partie
+function endGame() {
+  displayMessage(`Finished game! Scoring: ${score}/${totalCards}`);
+
+  // Log de fin de partie avec le score
+  logGameOver(score, totalCards);
+
+  // Créer un élément de bouton "Réessayer"
+  const retryButton = document.createElement("button");
+  retryButton.classList.add("retry-button");
+  retryButton.innerHTML = `<i class="retry-icon">&#8635;</i> Retry`;
+
+  // Ajouter un événement pour recharger la page lorsque le bouton est cliqué
+  retryButton.onclick = function() {
+    window.location.reload();
+  };
+
+  // Ajouter le bouton à la fin du body ou à un conteneur spécifique
+  document.body.appendChild(retryButton);
+}
+
