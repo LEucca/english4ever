@@ -136,7 +136,6 @@ h1 {
 }
 /* Style du footer */
 footer {
-  position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
