@@ -3,12 +3,12 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #FFFFFF;
+  background-color: #F5F5F7;
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-  color: #F5F5F7;
+  color: #D6D6D6;
 }
 
 header {
