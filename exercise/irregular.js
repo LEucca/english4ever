@@ -226,15 +226,3 @@ function endGame() {
   document.body.appendChild(retryButton);
 }
 
-// JS to hide/reveal the navbar on scroll
-let lastScrollY = window.scrollY;
-const header = document.querySelector('header');
-
-window.addEventListener('scroll', () => {
-  if (window.scrollY > lastScrollY) {
-    header.classList.add('hidden');  // Hide header on scroll down
-  } else {
-    header.classList.remove('hidden'); // Show header on scroll up
-  }
-  lastScrollY = window.scrollY;
-});
