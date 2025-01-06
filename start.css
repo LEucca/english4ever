@@ -114,17 +114,19 @@ h1 {
 .snowflake:nth-child(5) { left: 70%; animation-duration: 11s; }
 .snowflake:nth-child(6) { left: 80%; animation-duration: 7s; }
 
-/* Footer modifié */
+/* Style du footer */
 footer {
-  width: 100%;
-  background-color: #F5F5DC; /* Fond beige */
-  color: #1565C0;
-  text-align: center;
-  padding: 20px;
-  position: relative; /* Le footer n'est plus en position fixe */
+  position: fixed;
   bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
 }
 
 footer p {
   margin: 0;
-}
+}  
