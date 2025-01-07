@@ -137,19 +137,70 @@ h1 {
   font-size: 20px;
   margin-right: 10px;
 }
-/* Style du footer */
 footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: #333333;
-  color: white;
-  text-align: center;
-  padding: 10px;
-  font-size: 14px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f9f9f9;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    font-size: 14px;
+    border-top: 1px solid #ccc;
 }
 
-footer p {
-  margin: 0;
-} 
+footer a {
+    color: black; /* Met la couleur des liens en noir */
+    text-decoration: none; /* Retire le soulignement des liens */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Ajoute un soulignement au survol (facultatif) */
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.column {
+    width: 18%;
+}
+
+.column h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.column ul li {
+    margin-bottom: 6px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    margin: 5px 0;
+}
+
+.legal {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.legal li {
+    margin: 0;
+}
+
+.footer-bottom p:last-
