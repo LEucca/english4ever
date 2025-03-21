@@ -1,23 +1,24 @@
 /* Global styles */
-body {
-  height: 100%;
+* {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #F5F5F7;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100vh;
-  color: #D6D6D6;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: Arial, sans-serif;
+  background-color: #F5F5F7;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* HEADER */
 header {
   width: 100%;
-  background-color: #333333;
-  padding: 5px 0;
+  background-color: #333;
+  padding: 10px 0;
 }
 
 nav {
@@ -28,8 +29,8 @@ nav {
 }
 
 .logo {
-  width: 200px;
-  height: 40px;
+  width: 150px;
+  height: auto;
 }
 
 .toolbar {
@@ -47,13 +48,24 @@ nav {
 h1 {
   margin-top: 20px;
   color: #1E3A8A;
+  text-align: center;
+}
+
+/* MAIN CONTENT */
+main {
+  flex: 1; /* Permet au contenu principal de prendre tout l'espace disponible */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 /* Card styles */
 #card-container {
   position: relative;
-  margin: 20px;
   width: 100%;
+  max-width: 400px;
   height: 200px;
 }
 
@@ -81,7 +93,7 @@ h1 {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Category styles */
+/* Categories */
 .categories {
   display: flex;
   gap: 20px;
@@ -108,13 +120,14 @@ h1 {
   border: 3px dashed white;
 }
 
-/* Score styles */
+/* Score */
 #score-container {
   margin-top: 20px;
   font-size: 20px;
-  color: #1E3A8A;  
+  color: #1E3A8A;
 }
-/* Styles du bouton Réessayer */
+
+/* Retry Button */
 .retry-button {
   display: inline-flex;
   align-items: center;
@@ -137,70 +150,62 @@ h1 {
   font-size: 20px;
   margin-right: 10px;
 }
+
+/* FOOTER */
 footer {
-    position: relative;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #f9f9f9;
-    padding: 20px;
-    font-family: Arial, sans-serif;
-    color: #333;
-    font-size: 14px;
-    border-top: 1px solid #ccc;
-}
-
-footer a {
-    color: black; /* Met la couleur des liens en noir */
-    text-decoration: none; /* Retire le soulignement des liens */
-}
-
-footer a:hover {
-    text-decoration: underline; /* Ajoute un soulignement au survol (facultatif) */
+  background-color: #f9f9f9;
+  padding: 20px;
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+  border-top: 1px solid #ccc;
 }
 
 .footer-columns {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-bottom: 10px;
 }
 
 .column {
-    width: 18%;
+  width: 45%;
+  margin-bottom: 10px;
 }
 
 .column h3 {
-    font-size: 16px;
-    margin-bottom: 10px;
+  font-size: 16px;
+  margin-bottom: 10px;
 }
 
 .column ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .column ul li {
-    margin-bottom: 6px;
+  margin-bottom: 6px;
+}
+
+footer a {
+  color: black;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
 
 .footer-bottom {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.footer-bottom p {
-    margin: 5px 0;
+  margin-top: 20px;
 }
 
 .legal {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
-
-.legal li {
-    margin: 0;
-}
-
-.footer-bottom p:last-
